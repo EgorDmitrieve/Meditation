@@ -1,0 +1,1 @@
+let burger=document.querySelector(".header__burger"),menu=document.querySelector(".menu");burger.addEventListener("click",(function(e){burger.classList.toggle("active"),menu.classList.toggle("active"),document.body.classList.toggle("lock")}));
