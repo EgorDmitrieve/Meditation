@@ -1,0 +1,478 @@
+// Start file
+@import "start.scss";
+
+// Base
+body {
+  font-family: "Heebo";
+  background: #ddf2ef;
+}
+
+[class*="__container"] {
+  max-width: 1620px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.button {
+  display: inline-block;
+  font-weight: 400;
+  font-size: 1.5rem; // 24
+  line-height: 130%;
+  text-align: center;
+  padding: 0.5em 1.833em; // 12 44
+  color: #ffffff;
+  background: #259385;
+  border-radius: 30px;
+  transition: 0.4s;
+  box-shadow: 0px 13px 28px rgba(26, 127, 114, 0.2);
+  &:hover {
+    background: #28a393;
+    padding: 0.5em 1.2em;
+  }
+}
+
+// Header
+.header {
+  // Menu
+  .menu {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 25px 40px rgba(26, 127, 114, 0.1);
+    
+    &::before {
+      content: "";
+      display: block;
+      background: #fff;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      position: absolute;
+    }
+
+    .menu__row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
+
+      // Logo
+      .menu__logo {
+        margin: 0 50px 0 0;
+        img {
+          width: 70px;
+          height: 70px;
+          -webkit-filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25));
+        }
+      }
+
+      // Burger
+      .menu__burger {
+        display: none;
+        width: 30px;
+        height: 20px;
+        position: relative;
+        @media (max-width: 950px) {
+          display: block;
+        }
+
+        &::before,
+        &::after {
+          content: "";
+          display: block;
+          background: #1a7f72;
+          height: 2px;
+          width: 100%;
+          position: absolute;
+        }
+        &::before {
+          top: 0;
+        }
+        &::after {
+          bottom: 0;
+        }
+
+        span {
+          display: block;
+          position: absolute;
+          background: #1a7f72;
+          height: 2px;
+          top: 9px;
+          width: 100%;
+        }
+      }
+
+      // List
+      .menu__list {
+        display: flex;
+        position: relative;
+        z-index: 2;
+        flex-wrap: wrap;
+        align-items: center;
+        column-gap: 4.6875rem; // 75px
+
+        & li:nth-child(1) a {
+          font-weight: 500;
+          font-size: 1.5rem; // 32
+          line-height: calc(47 / 32 * 100%); //47
+          color: #1a7f72;
+          position: relative;
+        }
+
+        .menu__item {
+          font-family: inherit;
+          font-weight: 400;
+          font-size: 1.2rem; //28
+          line-height: calc(41 / 28 * 100%); // 41
+          color: #000000;
+        }
+      }
+    }
+  }
+
+  // Start
+  .start {
+    position: relative;
+    padding: 100px 0 0 0;
+
+    // Body
+    .start__body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      .start__title {
+        font-family: "Merienda One";
+        font-size: 4.25rem; // 68
+        line-height: calc(88 / 68 * 100%); // 88
+        text-align: center;
+        color: #ffffff;
+        padding: 1.029em 0 0 0;
+        margin: 0 0 0.323em 0;
+        @media (max-width: 1160px) {
+          font-size: 3.8rem;
+        }
+        @media (max-width: 760px) {
+          font-size: 3rem;
+        }
+        @media (max-width: 620px) {
+          font-size: 2.3rem;
+        }
+        @media (max-width: 460px) {
+          font-size: 1.8rem;
+        }
+      }
+
+      .start__text {
+        font-size: 1.5rem;
+        line-height: 130%; // 31
+        text-align: center;
+        color: rgba(0, 0, 0, 0.5);
+        &:not(:last-child) {
+          margin: 0 0 1.25em 0;
+        }
+        @media (max-width: 1160px) {
+          font-size: 1rem;
+        }
+        @media (max-width: 760px) {
+          font-size: 0.8rem;
+        }
+        @media (max-width: 620px) {
+          font-size: 0.6rem;
+        }
+        @media (max-width: 460px) {
+          font-size: 0.5rem;
+        }
+      }
+
+      .start__button {
+        font-family: inherit;
+        display: inline-block;
+        margin: 0 auto 2.333em auto;
+        background: #259385;
+        box-shadow: 0px 20px 40px rgba(21, 113, 101, 0.2);
+        border-radius: 50px;
+        font-weight: 700;
+        font-size: 1.875rem; // 30
+        line-height: 130%; // 39
+        text-align: center;
+        color: #ffffff;
+        padding: 0.63em 2.966em;
+        transition: 0.4s;
+        &:hover {
+          background: #28a393;
+          padding: 0.63em 2em;
+        }
+        @media (max-width: 1160px) {
+          font-size: 1.4rem;
+        }
+        @media (max-width: 620px) {
+          font-size: 1rem;
+        }
+        @media (max-width: 460px) {
+          font-size: 0.7rem;
+        }
+      }
+
+      .start__girl {
+        max-width: 590px;
+        padding: 0 15px;
+        position: relative;
+        margin: 0 auto;
+        img {
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
+    // Backgroud
+    .start__background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+      width: 100%;
+      height: 140%;
+      z-index: -1; //
+    }
+  }
+}
+
+// Main
+.page {
+  padding-bottom: 100px;
+
+  // Cards
+  .cards {
+    padding: 120px 0 44px 0;
+    @media (max-width: 500px) {
+      padding: 60px 0 0 0;
+    }
+
+    .cards__row {
+      display: flex;
+      column-gap: 180px;
+      @media (max-width: 1735px) {
+        column-gap: 40px;
+      }
+      @media (max-width: 1000px) {
+        column-gap: 0;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+    }
+
+    .cards__card {
+      position: relative;
+      display: flex;
+      flex: 0 1 33.333%;
+      flex-direction: column;
+      @media (max-width: 1000px) {
+        max-width: 632px;
+        margin: 0 0 60px 0;
+      }
+    }
+
+    .cards__icon {
+      width: 100px;
+      height: 100px;
+      margin: 50px auto 1.25rem auto; // 20
+    }
+
+    .cards__title {
+      font-weight: 500;
+      font-size: 2rem; // 32
+      line-height: calc(47 / 32 * 100%); //47
+      margin: 0 50px 0.625em 50px;
+      text-align: center;
+      color: #000000;
+      @media (max-width: 1735px) {
+        margin: 0 20px 0.625em 20px;
+      }
+    }
+
+    .cards__text {
+      font-weight: 400;
+      font-size: 1.125rem; // 18
+      line-height: 130%; // 23
+      text-align: center;
+      color: #000000;
+      display: flex;
+      flex: 1 1 auto;
+      &:not(:last-child) {
+        margin: 0 50px 3.333em 50px; // 60
+        @media (max-width: 1735px) {
+          margin: 0 20px 2em 20px;
+        }
+      }
+    }
+
+    .cards__button {
+      max-width: 210px;
+      margin: 0 auto 90px auto;
+    }
+
+    .cards__bg {
+      position: absolute;
+      top: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: bottom;
+      z-index: -1;
+      border-radius: 20px 20px 0 0;
+      -webkit-filter: drop-shadow(0px 19px 50px rgba(26, 127, 114, 0.15));
+      filter: 0px 19px 50px rgba(26, 127, 114, 0.15);
+      transition: 0.5s;
+    }
+  }
+
+  // Arrow
+  .arrow {
+    .arrow__title {
+      font-family: "Merienda One";
+      font-weight: 400;
+      font-size: 3.375rem; // 54
+      line-height: 130%;
+      text-align: center;
+      color: #000000;
+      &:not(:last-child) {
+        margin: 1.425em 0 0.407em 0;
+        @media (max-width: 1200px) {
+          margin: 0.3em 0 0.407em 0;
+        }
+      }
+      @media (max-width: 1200px) {
+        font-size: 3rem;
+      }
+      @media (max-width: 675px) {
+        font-size: 2.5rem;
+      }
+      @media (max-width: 560px) {
+        font-size: 2rem;
+      }
+    }
+    .arrow__text {
+      font-weight: 400;
+      font-size: 1.5rem; // 24
+      line-height: 130%;
+      text-align: center;
+      color: rgba(0, 0, 0, 0.5);
+      margin: 0 0 2.196em 0;
+      @media (max-width: 1512px) {
+        margin: 0;
+      }
+      @media (max-width: 1200px) {
+        font-size: 1.1rem;
+      }
+      @media (max-width: 675px) {
+        font-size: 1rem;
+      }
+      @media (max-width: 560px) {
+        font-size: 0.8rem;
+      }
+    }
+    .arrow__row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @media (max-width: 1512px) {
+        flex-direction: column;
+      }
+      .arrow__image {
+        width: 745px;
+        height: 594px;
+        @media (max-width: 900px) {
+          width: 595px;
+          height: 444px;
+        }
+        @media (max-width: 600px) {
+          width: 495px;
+          height: 344px;
+        }
+      }
+      .arrow__callouts {
+      }
+      .callouts-arrow {
+        display: flex;
+        flex-direction: column;
+        row-gap: 50px;
+        @media (max-width: 1512px) {
+          row-gap: 20px;
+        }
+      }
+      .callouts-arrow__block {
+        position: relative;
+        width: 730px;
+        &:hover .callouts-arrow__bg {
+          opacity: 1;
+          -webkit-filter: drop-shadow(0px 8px 50px rgba(26, 127, 114, 0.2));
+          filter: drop-shadow(0px 8px 50px rgba(26, 127, 114, 0.2));
+        }
+        @media (max-width: 800px) {
+          width: 500px;
+        }
+        @media (max-width: 600px) {
+          width: 400px;
+        }
+        @media (max-width: 450px) {
+          width: 300px;
+        }
+      }
+      .callouts-arrow__title {
+        font-weight: 500;
+        font-size: 2rem; // 32
+        line-height: calc(47 / 32 * 100%);
+        color: rgba(0, 0, 0, 0.8);
+        margin: 0 0 0.3125em 0;
+        padding: 35px 58px 0 40px;
+        max-width: 619px;
+        @media (max-width: 450px) {
+          font-size: 1.5rem;
+        }
+      }
+      .callouts-arrow__text {
+        font-size: 1.5rem;
+        line-height: 130%;
+        color: rgba(0, 0, 0, 0.5);
+        padding: 0 58px 60px 40px;
+        @media (max-width: 800px) {
+          padding: 0 58px 80px 40px;
+        }
+        @media (max-width: 600px) {
+          padding: 0 58px 60px 40px;
+          font-size: 1rem;
+        }
+        @media (max-width: 450px) {
+          padding: 0 58px 80px 40px;
+        }
+      }
+      .callouts-arrow__bg {
+        position: absolute;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        z-index: -1;
+        object-position: right;
+        border-radius: 15px 0 0 15px;
+        transition: 0.4s;
+        @media (max-width: 800px) {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
