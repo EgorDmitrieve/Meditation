@@ -421,6 +421,13 @@ body {
 
   // Arrow
   .arrow {
+    position: relative;
+    .arrow__hieroglyphics {
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      z-index: -2;
+    }
     .arrow__title {
       font-family: "Merienda One";
       font-weight: 400;

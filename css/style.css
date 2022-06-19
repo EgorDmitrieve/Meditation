@@ -575,6 +575,15 @@ body.lock {
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
+.page .arrow {
+  position: relative;
+}
+.page .arrow .arrow__hieroglyphics {
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -2;
+}
 .page .arrow .arrow__title {
   font-family: "Merienda One";
   font-weight: 400;
