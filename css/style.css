@@ -1068,9 +1068,19 @@ body.lock {
     background-size: 140% 100%;
   }
 }
-@media (max-width: 470px) {
+@media (max-width: 660px) {
   .page .wave {
-    background-size: 200% 100%;
+    background-size: 180% 100%;
+  }
+}
+@media (max-width: 480px) {
+  .page .wave {
+    background-size: 220% 100%;
+  }
+}
+@media (max-width: 370px) {
+  .page .wave {
+    background-size: 250% 100%;
   }
 }
 .page .wave__container {
@@ -1119,6 +1129,16 @@ body.lock {
       -ms-flex-direction: column;
           flex-direction: column;
   row-gap: 6.25rem;
+}
+@media (max-width: 1020px) {
+  .page .wave__row .wave__cards {
+    row-gap: 4rem;
+  }
+}
+@media (max-width: 620px) {
+  .page .wave__row .wave__cards {
+    row-gap: 3rem;
+  }
 }
 .page .wave__row .wave__cards .card-wave {
   width: 36.4rem;
