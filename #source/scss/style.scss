@@ -321,9 +321,6 @@ body {
         @media (max-width: 620px) {
           font-size: 0.6rem;
         }
-        @media (max-width: 460px) {
-          font-size: 0.5rem;
-        }
       }
 
       .start__button {
@@ -718,6 +715,7 @@ body {
         font-size: 0.6rem;
       }
     }
+
     .player-audio__button {
       width: 50px;
       height: 50px;
@@ -738,6 +736,10 @@ body {
         top: 0;
         left: 0;
         object-fit: cover;
+        
+        @media (max-width: 528px) {
+        left: -1px;
+        }
       }
       &::before {
         content: "";
@@ -768,11 +770,11 @@ body {
       & img {
         width: 80%;
         height: 80%;
-        top: 5px;
+        top: 6px;
         left: 2px;
         @media (max-width: 528px) {
-          top: 4px;
-          left: 1px;
+          top: 3.5px;
+          left: 0px;
         }
       }
     }
@@ -797,12 +799,12 @@ body {
       @media (max-width: 768px) {
         width: 496px;
         height: 479px;
-        margin: -60px 0 -60px 0;
+        margin: -50px 0 -50px 0;
       }
       @media (max-width: 528px) {
         width: 396px;
         height: 379px;
-        margin: -50px 0 -60px 0;
+        margin: -45px 0 -50px 0;
       }
     }
   }
